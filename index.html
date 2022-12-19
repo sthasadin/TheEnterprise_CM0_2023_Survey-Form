@@ -160,6 +160,85 @@
          <!--*What channel(s) will you absolutely use in 2023, and why?* -->
         <label class="headingLabel">What channel(s) will you absolutely use in 2023, and why?<span class="required-span">*</span></label>
         <textarea type="text" cols="60" rows="3" name="Focusing" required></textarea><br>
+
+
+         <!--*Overall digital marketing spend in 2022?* Mention USD or INR -->
+        <label class="headingLabel">What was your overall digital marketing spend in 2022?<span class="required-span">*</span><br>Mention USD or INR</label>
+        <input type="text" name="OverallMarketingSpend2022"><br>
+
+      
+
+         <!--*-------------------Tell us the split fo your overall digital marketing spends multichoice gird----------------------- -->
+         <label class="headingLabel" for="marketingChannel">Tell us the split fo your overall digital marketing spends.
+          <span class="required-span">*</span></label>
+       
+       <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">% Split</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <!--!contains range logic-->
+            <!-- *googleSpend -->
+            <tr>
+              <th scope="row">Google</th>
+              <th scope="col"><input type="range"  id="googleInputId"  name="googleSpend"value="24" min="1" max="100" oninput="googleOutputId.value = googleInputId.value">
+              </th>
+              <th scope="col"> <output id="googleOutputId">24</output></th>
+            </tr>
+             <!-- *LinkedInSpend -->
+            <tr>
+              <th scope="row">LinkedIn</th>
+              <th scope="col"><input type="range"  id="linkedInInputId"  name="linkedInSpend"value="24" min="1" max="100" oninput="linkedInOutputId.value = linkedInInputId.value">
+              </th>
+              <th scope="col"> <output id="linkedInOutputId">24</output></th>
+            </tr>
+            <!-- *instagramSpend -->
+            <tr>
+              <th scope="row">Instagram</th>
+              <th scope="col"><input type="range"  id="instagramInputId"  name="instagramSpend"value="24" min="1" max="100" oninput="instagramOutputId.value = instagramInputId.value">
+              </th>
+              <th scope="col"> <output id="instagramOutputId">24</output></th>
+            </tr>
+            <!-- *facebookSpend -->
+            <tr>
+              <th scope="row">Facebook</th>
+              <th scope="col"><input type="range"  id="facebookInputId"  name="facebookSpend"value="24" min="1" max="100" oninput="facebookOutputId.value = facebookInputId.value">
+              </th>
+              <th scope="col"> <output id="facebookOutputId">24</output></th>
+            </tr>
+            <!-- *twitterSpend -->
+            <tr>
+              <th scope="row">Twitter</th>
+              <th scope="col"><input type="range"  id="twitterInputId"  name="twitterSpend"value="24" min="1" max="100" oninput="twitterOutputId.value = twitterInputId.value">
+              </th>
+              <th scope="col"> <output id="twitterOutputId">24</output></th>
+            </tr>
+            <!-- *whatsAppImSpend -->
+            <tr>
+              <th scope="row">Whatsapp/IM</th>
+              <th scope="col"><input type="range"  id="whatsAppImInputId"  name="whatsAppImSpend"value="24" min="1" max="100" oninput="whatsAppImOutputId.value = whatsAppImInputId.value">
+              </th>
+              <th scope="col"> <output id="whatsAppImOutputId">24</output></th>
+            </tr>
+            <!-- *emailSpend -->
+            <tr>
+              <th scope="row">Email</th>
+              <th scope="col"><input type="range"  id="emailInputId"  name="emailSpend"value="24" min="1" max="100" oninput="emailOutputId.value = emailInputId.value">
+              </th>
+              <th scope="col"> <output id="emailOutputId">24</output></th>
+            </tr>
+
+            
+
+           
+          </tbody>
+        </table>
+        <!--*--------------xx-----Channels effectiveness multichoice gird-table------xx---------------- -->
+
         
 
 
