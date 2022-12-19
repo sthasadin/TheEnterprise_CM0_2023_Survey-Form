@@ -64,6 +64,7 @@
             <p>---------------------------------------------------------</p>
          </div>
          <!--*-------------------Channels effectiveness multichoice gird----------------------- -->
+         <!--FIXME: change the for, wrt the section -->
          <label class="headingLabel" for="marketingChannel">Rate your chosen channels' effectiveness.
             <span class="required-span">*</span></label>
          
@@ -169,6 +170,7 @@
       
 
          <!--*-------------------Tell us the split fo your overall digital marketing spends multichoice gird----------------------- -->
+         <!--FIXME: change the for, wrt the section -->
          <label class="headingLabel" for="marketingChannel">Tell us the split fo your overall digital marketing spends.
           <span class="required-span">*</span></label>
        
@@ -241,8 +243,10 @@
 
 
         <!--*------------------- channel perform in terms of creating brand awareness?*----------------------- -->
+        <!--FIXME: change the for, wrt the section -->
         <label class="headingLabel" for="marketingChannel">How id each channel perform in terms of creating brand awareness?
           <span class="required-span">*</span></label>
+          <p>E.g. Google contributed to 30% of the total awareness created.</p>
        
        <table class="table">
           <thead>
@@ -307,6 +311,81 @@
         </table>
         <!--*--------------xx----- channel perform in terms of creating brand awareness?*------xx-->
 
+
+        <!--*------------------- channel perform in terms of lead generation?*----------------------- -->
+        <!--FIXME: change the for, wrt the section -->
+        <label class="headingLabel" for="marketingChannel">How did each channel perform in terms of lead generation
+          <span class="required-span">*</span></label>
+          <p>Mention the percentage split across channels. E.g. 30% of leads came from Google. </p>
+       
+       <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">% Split</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <!--!contains range logic-->
+            <!-- *googleLeadGen -->
+            <tr>
+              <th scope="row">Google</th>
+              <th scope="col"><input type="range"  id="googleLeadGenInputId"  name="googleLeadGen"value="24" min="1" max="100" oninput="googleLeadGenOutputId.value = googleLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="googleLeadGenOutputId">24</output></th>
+            </tr>
+            <!-- *linkedInLeadGen -->
+            <tr>
+              <th scope="row">linkedIn</th>
+              <th scope="col"><input type="range"  id="linkedInLeadGenInputId"  name="linkedInLeadGen"value="24" min="1" max="100" oninput="linkedInLeadGenOutputId.value = linkedInLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="linkedInLeadGenOutputId">24</output></th>
+            </tr>
+            <!-- *instagramLeadGen -->
+            <tr>
+              <th scope="row">Instagram</th>
+              <th scope="col"><input type="range"  id="instagramLeadGenInputId"  name="instagramLeadGen" value="24" min="1" max="100" oninput="instagramLeadGenOutputId.value = instagramLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="instagramLeadGenOutputId">24</output></th>
+            </tr>
+            <!-- *facebookLeadGen -->
+            <tr>
+              <th scope="row">Facebook</th>
+              <th scope="col"><input type="range"  id="facebookLeadGenInputId"  name="facebookLeadGen" value="24" min="1" max="100" oninput="facebookLeadGenOutputId.value = facebookLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="facebookLeadGenOutputId">24</output></th>
+            </tr>
+            <!-- *twitterLeadGen -->
+            <tr>
+              <th scope="row">Twitter</th>
+              <th scope="col"><input type="range"  id="twitterLeadGenInputId"  name="twitterLeadGen" value="24" min="1" max="100" oninput="twitterLeadGenOutputId.value = twitterLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="twitterLeadGenOutputId">24</output></th>
+            </tr>
+            <!-- *whatsAppImLeadGen -->
+            <tr>
+              <th scope="row">linkedIn</th>
+              <th scope="col"><input type="range"  id="whatsAppImLeadGenInputId"  name="whatsAppImLeadGen" value="24" min="1" max="100" oninput="whatsAppImLeadGenOutputId.value = whatsAppImLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="whatsAppImLeadGenOutputId">24</output></th>
+            </tr>
+            <!-- *emailLeadGen -->
+            <tr>
+              <th scope="row">linkedIn</th>
+              <th scope="col"><input type="range"  id=emailLeadGenInputId"  name="emailLeadGen" value="24" min="1" max="100" oninput="emailLeadGenOutputId.value = emailLeadGenInputId.value">
+              </th>
+              <th scope="col"> <output id="emailLeadGenOutputId">24</output></th>
+            </tr>
+            
+          </tbody>
+        </table>
+        <!--*--------------xx----- channel perform in terms of creating brand awareness?*------xx-->
+
+
+        <!--* % of total leads were qualified as per your benchmark -->
+        <label class="headingLabel">Out of all leads generated, what % of total leads were qualified as per your benchmark?<span class="required-span">*</span></label>
+        <input type="text" name="qualifiedLeads"><br>
 
          <!--*this is a comment -->
         
