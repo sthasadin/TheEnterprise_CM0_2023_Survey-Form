@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Enterprise Trend Report Survey 2022</title>
+    <style>
+        label{
+    display: block;
+}
+
+.required-span{
+   color: red;
+}
+    </style>
+</head>
+<body>
+    <h1 id="title">Enterprise Trend Report Survey 2022</h1>
+    <p id="description">Welcome to The Enterprise Marketing Trend Survey 2022. </p>
+    <p id="description">
+        Over the next few minutes, we will seek your input on a few, simple questions around industry & marketing trends you have observed, and expect to see in 2023.
+        Eligible responses stand a chance to win Amazon (India) gift vouchers of up to US$ 100 value (approximate, in INR). Please ensure accuracy across descriptive answers to enhance eligibility. 
+        Your contact information is required to validate responses, and will remain confidential. A choice to remain anonymous is provided at the end of the survey.
+        The Enterprise T&Cs apply. 
+    </p>
+    <form  id="trendsSuveryForm" method="POST" action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec">
+        <!-- Fullname -->
+        <label class="headingLabel">Full Name <span class="required-span">*</span></label>
+        <input type="text" name="FullName" required />
+
+        <!-- Phone -->
+        <label class="headingLabel" for="phone">Phone<span class="required-span">*</span></label>
+        <input type="tel" name="Phone"required/>
+
+         <!-- Work Email -->
+         <label class="headingLabel"for="email">Work Email<span class="required-span">*</span></label>
+         <input type="email" name="Email" required/>
+
+         <!-- LinkedIn profile -->
+         <label class="headingLabel" for="LinkedIn">LinkedIn Profile Link<span class="required-span">*</span></label>
+         <input type="url" name="LinkedInURL"required/>
+
+
+         <!-- SECTION 2 -->
+         <!-- marketing channels -->
+         <label class="headingLabel" for="marketingChannel">Out of these, which channels do you use for marketing? Check all that apply.<span class="required-span">*</span></label>
+         
+         <label for="google"><input type="checkbox" name="Google" value="yes" /> Google</label>
+         <label for="linkedIn"><input type="checkbox" name="LinkedIn" value="yes" /> LinkedIn</label>
+         <label for="instagram"><input type="checkbox" name="Instagram" value="yes"/> Instagram</label>
+         <label for="facebook"><input type="checkbox" name="Facebook" value="yes"/> Facebook</label>
+         <label for="twitter"><input type="checkbox" name="Twitter" value="yes"/> Twitter</label>
+         <label for="whatsappIm"><input type="checkbox" name="WhatsApp/IM" value="yes"/> WhatsApp/IM</label>
+         <label for="email"><input type="checkbox" name="Email-C" value="yes"/> Email</label>
+         <label for="other"> Other <input name="Other" type="text"></label>
+
+         <div>
+            <p>---------------------------------------------------------</p>
+         </div>
+         <!--*-------------------Channels effectiveness multichoice gird----------------------- -->
+         <label class="headingLabel" for="marketingChannel">Rate your chosen channels' effectiveness.
+            <span class="required-span">*</span></label>
+         
+         <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Not Effective</th>
+                <th scope="col">Somewhat Effective</th>
+                <th scope="col">Effective</th>
+                <th scope="col">Very Effective</th>
+                <th scope="col">Not Applicable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- *Google multigrid choices -->
+              <tr>
+                <th scope="row">Google</th>
+                <th scope="col"><input type="radio" name="Google-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="Google-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Google-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Google-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Google-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+
+              <!-- *LinkedIn multigrid choices -->
+              <tr>
+                <th scope="row">LinkedIn</th>
+                <th scope="col"><input type="radio" name="LinkedIn-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="LinkedIn-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="LinkedIn-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="LinkedIn-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="LinkedIn-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+
+              <!-- *Instagram multigrid choices -->
+              <tr>
+                <th scope="row">Instagram</th>
+                <th scope="col"><input type="radio" name="Instagram-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="Instagram-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Instagram-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Instagram-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Instagram-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+
+              <!-- *Facebook multigrid choices -->
+              <tr>
+                <th scope="row">Facebook</th>
+                <th scope="col"><input type="radio" name="Facebook-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="Facebook-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Facebook-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Facebook-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Facebook-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+
+              <!-- *Twitter multigrid choices -->
+              <tr>
+                <th scope="row">Twitter</th>
+                <th scope="col"><input type="radio" name="Twitter-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="Twitter-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Twitter-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Twitter-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Twitter-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+
+              <!-- *Twitter multigrid choices -->
+              <tr>
+                <th scope="row">WhatsApp/IM</th>
+                <th scope="col"><input type="radio" name="WhatsAppIm-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="WhatsAppIm-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="WhatsAppIm-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="WhatsAppIm-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="WhatsAppIm-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+
+              <!-- *Email multigrid choices -->
+              <tr>
+                <th scope="row">Email</th>
+                <th scope="col"><input type="radio" name="Email-Effectiveness" value="Not Effective"/></label></th>
+                <th scope="col"><input type="radio" name="Email-Effectiveness" value="Somewhat Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Email-Effectiveness" value="Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Email-Effectiveness" value="Very Effective"/></label></th></th>
+                <th scope="col"><input type="radio" name="Email-Effectiveness" value="Not Applicable"/></label></th></th>
+              </tr>
+            </tbody>
+          </table>
+          <!--*--------------xx-----Channels effectiveness multichoice gird-table------xx---------------- -->
+
+
+         <!-- *What channel(s) will you not be using (or focusing on) in 2023, and why?* -->
+        <label class="headingLabel">What channel(s) will you <strong>not</strong> be using (or focusing on) in 2023, and why? <span class="required-span">*</span></label>
+        <textarea type="text" cols="60" rows="3" name="NotFocusing" required></textarea><br>
+
+         <!--*What channel(s) will you absolutely use in 2023, and why?* -->
+        <label class="headingLabel">What channel(s) will you absolutely use in 2023, and why?<span class="required-span">*</span></label>
+        <textarea type="text" cols="60" rows="3" name="Focusing" required></textarea><br>
+        
+
+
+         <!--*this is a comment -->
+        
+          <!--!SUBMIT BUTTON-->
+         <button type="submit" onclick="testBtn()">Submit</button>
+        
+    </form>
+    
+    <script>
+    function testBtn(){
+            console.log("button is pressed")
+        }
+
+    </script>
+    
+<!-- 
+    <script>
+        const form = document.querySelector('#trendsSuveryForm')
+        const submitButton = document.querySelector("#submit")
+        const scriptURL='https://script.google.com/macros/library/d/1YAg0fQRyOgaLF1dpb-OQIL7g84Dz3xhAx3ZjFxDIaEPDkBEO-QuCH0Di/1'
+    
+        form.addEventListener('submit', e => {
+         submitButton.disabled = true
+         e.preventDefault()
+         let requestBody = new FormData(form)
+         fetch(scriptURL, { method: 'POST', body: requestBody})
+           .then(response => {
+              alert('Success!', response)
+              submitButton.disabled = false
+             })
+           .catch(error => {
+           alert('Error!', error.message)
+             submitButton.disabled = false
+    
+           }
+           )
+       })
+    
+    
+    </script> -->
+</body>
+
+</html>
