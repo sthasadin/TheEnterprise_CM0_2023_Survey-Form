@@ -38,17 +38,17 @@
         <label class="headingLabel" for="phone">Phone<span class="required-span">*</span></label>
         <input type="tel" name="Phone"required/>
 
-         <!-- Work Email -->
+         <!--* Work Email -->
          <label class="headingLabel"for="email">Work Email<span class="required-span">*</span></label>
          <input type="email" name="Email" required/>
 
-         <!-- LinkedIn profile -->
+         <!-- *LinkedIn profile -->
          <label class="headingLabel" for="LinkedIn">LinkedIn Profile Link<span class="required-span">*</span></label>
          <input type="url" name="LinkedInURL"required/>
 
 
-         <!-- SECTION 2 -->
-         <!-- marketing channels -->
+         <!--* SECTION 2 -->
+         <!-- *marketing channels -->
          <label class="headingLabel" for="marketingChannel">Out of these, which channels do you use for marketing? Check all that apply.<span class="required-span">*</span></label>
          
          <label for="google"><input type="checkbox" name="Google" value="yes" /> Google</label>
@@ -305,7 +305,7 @@
               <th scope="row">Twitter</th>
               <th scope="col"><input type="range"  id="emailAwarenessInputId"  name="emailAwareness" value="24" min="1" max="100" oninput="emailAwarenessOutputId.value = emailAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id=emailAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="emailAwarenessOutputId">24</output></th>
             </tr>
           </tbody>
         </table>
@@ -373,7 +373,7 @@
             <!-- *emailLeadGen -->
             <tr>
               <th scope="row">linkedIn</th>
-              <th scope="col"><input type="range"  id=emailLeadGenInputId"  name="emailLeadGen" value="24" min="1" max="100" oninput="emailLeadGenOutputId.value = emailLeadGenInputId.value">
+              <th scope="col"><input type="range"  id="emailLeadGenInputId"  name="emailLeadGen" value="24" min="1" max="100" oninput="emailLeadGenOutputId.value = emailLeadGenInputId.value">
               </th>
               <th scope="col"> <output id="emailLeadGenOutputId">24</output></th>
             </tr>
@@ -386,6 +386,228 @@
         <!--* % of total leads were qualified as per your benchmark -->
         <label class="headingLabel">Out of all leads generated, what % of total leads were qualified as per your benchmark?<span class="required-span">*</span></label>
         <input type="text" name="qualifiedLeads"><br>
+
+        <!--*------------------- channel delivered the maximum qualified leads*----------------------- -->
+        <!--FIXME: change the for, wrt the section -->
+        <label class="headingLabel" for="marketingChannel">How did each channel perform in terms of lead generation
+          <span class="required-span">*</span></label>
+          <p>Mention the percentage split across channels. E.g. 30% of leads from Google were qualified. </p>
+       
+       <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">% Split</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <!--!contains range logic-->
+            <!-- *googleQLeads -->
+            <tr>
+              <th scope="row">Google</th>
+              <th scope="col"><input type="range"  id="googleQLeadsInputId"  name="googleQLeads" value="0" min="0" max="100" oninput="googleQLeadsOutputId.value = googleQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="googleQLeadsOutputId">0</output></th>
+            </tr>
+            <!-- *linkedInQLeads -->
+            <tr>
+              <th scope="row">linkedIn</th>
+              <th scope="col"><input type="range"  id="linkedInQLeadsInputId"  name="linkedInQLeads"value="0" min="0" max="100" oninput="linkedInQLeadsOutputId.value = linkedInQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="linkedInQLeadsOutputId">0</output></th>
+            </tr>
+            <!-- *instagramQLeads -->
+            <tr>
+              <th scope="row">Instagram</th>
+              <th scope="col"><input type="range"  id="instagramQLeadsInputId"  name="instagramQLeads" value="0" min="0" max="100" oninput="instagramQLeadsOutputId.value = instagramQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="instagramQLeadsOutputId">0</output></th>
+            </tr>
+            <!-- *facebookQLeads -->
+            <tr>
+              <th scope="row">Facebook</th>
+              <th scope="col"><input type="range"  id="facebookQLeadsInputId"  name="facebookQLeads" value="0" min="0" max="100" oninput="facebookQLeadsOutputId.value = facebookQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="facebookQLeadsOutputId">0</output></th>
+            </tr>
+            <!-- *twitterQLeads -->
+            <tr>
+              <th scope="row">Twitter</th>
+              <th scope="col"><input type="range"  id="twitterQLeadsInputId"  name="twitterQLeads" value="0" min="0" max="100" oninput="twitterQLeadsOutputId.value = twitterQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="twitterQLeadsOutputId">0</output></th>
+            </tr>
+            <!-- *whatsAppImQLeads -->
+            <tr>
+              <th scope="row">linkedIn</th>
+              <th scope="col"><input type="range"  id="whatsAppImQLeadsInputId"  name="whatsAppImQLeads" value="0" min="0" max="100" oninput="whatsAppImQLeadsOutputId.value = whatsAppImQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="whatsAppImQLeadsOutputId">0</output></th>
+            </tr>
+            <!-- *emailQLeads -->
+            <tr>
+              <th scope="row">linkedIn</th>
+              <th scope="col"><input type="range"  id="emailQLeadsInputId"  name="emailQLeads" value="0" min="0" max="100" oninput="emailQLeadsOutputId.value =emailQLeadsInputId.value">
+              </th>
+              <th scope="col"> <output id="emailQLeadsOutputId">0</output></th>
+            </tr>
+            
+          </tbody>
+        </table>
+        <!--*--------------xx-----Marketing Tactics?*------xx--><!--FIXME: change the for, wrt the section -->
+        <label class="headingLabel" for="marketingChannel">What marketing tactics did you use in 2023
+          <span class="required-span">*</span></label>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">% Split</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Email-based nurture</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+
+            <tr>
+              <th scope="row">Always-on ads</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+
+            <tr>
+              <th scope="row">Thematic campaign</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Offer-based ads</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Co-branded ads</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">White papers</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Competition targeting</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Contests</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Quizzes</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Games</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Affiliate marketing</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Influencer marketing</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Reels</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Videos</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Webinars/ online events</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Podcast</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Mobile push-notifications</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Case studies</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Reports</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Testimonials</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+            <tr>
+              <th scope="row">Other</th>
+              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              </th>
+            </tr>
+            
+          
+            
+          </tbody>
+        </table>
+        <!--*--------------xx----- Marketing Tactics*------xx-->
+
+        <label class="headingLabel" for="marketingChannel">Feature on this report
+          .<span class="required-span">*</span></label>
+         <!--FIXME: for labels-->
+         <label for="google"><input type="radio" name="featureOnReport" value="Feature on report" /> I would like to feature on this report</label>
+         <label for="linkedIn"><input type="radio" name="featureOnReport" value="Quote me without name" /> Quote me without name or company information</label>
+         <label for="instagram"><input type="radio" name="featureOnReport" value="Anonymous"/> I would like to remain anonymous</label>
+        
+
 
          <!--*this is a comment -->
         
