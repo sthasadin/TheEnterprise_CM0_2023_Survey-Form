@@ -21,14 +21,14 @@
     </style>
 </head>
 <body>
-    <h1 id="title">Enterprise Trend Report Survey 2022</h1>
+    <!-- <h1 id="title">Enterprise Trend Report Survey 2022</h1>
     <p id="description">Welcome to The Enterprise Marketing Trend Survey 2022. </p>
     <p id="description">
         Over the next few minutes, we will seek your input on a few, simple questions around industry & marketing trends you have observed, and expect to see in 2023.
         Eligible responses stand a chance to win Amazon (India) gift vouchers of up to US$ 100 value (approximate, in INR). Please ensure accuracy across descriptive answers to enhance eligibility. 
         Your contact information is required to validate responses, and will remain confidential. A choice to remain anonymous is provided at the end of the survey.
         The Enterprise T&Cs apply. 
-    </p>
+    </p> -->
     <form  id="trendsSuveryForm" method="POST" action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec">
         <!-- Fullname -->
         <label class="headingLabel">Full Name <span class="required-span">*</span></label>
@@ -179,6 +179,7 @@
             <tr>
               <th scope="col"></th>
               <th scope="col">% Split</th>
+              <th scope="col">00</th>
               
             </tr>
           </thead>
@@ -187,51 +188,51 @@
             <!-- *googleSpend -->
             <tr>
               <th scope="row">Google</th>
-              <th scope="col"><input type="range"  id="googleInputId"  name="googleSpend"value="24" min="1" max="100" oninput="googleOutputId.value = googleInputId.value">
+              <th scope="col"><input type="range"  id="googleInputId"  name="googleSpend"value="0" min="0" max="100" oninput="googleOutputId.value = googleInputId.value">
               </th>
-              <th scope="col"> <output id="googleOutputId">24</output></th>
+              <th scope="col"> <output id="googleOutputId">0</output></th>
             </tr>
              <!-- *LinkedInSpend -->
             <tr>
               <th scope="row">LinkedIn</th>
-              <th scope="col"><input type="range"  id="linkedInInputId"  name="linkedInSpend"value="24" min="1" max="100" oninput="linkedInOutputId.value = linkedInInputId.value">
+              <th scope="col"><input type="range"  id="linkedInInputId"  name="linkedInSpend"value="0" min="0" max="100" oninput="linkedInOutputId.value = linkedInInputId.value">
               </th>
-              <th scope="col"> <output id="linkedInOutputId">24</output></th>
+              <th scope="col"> <output id="linkedInOutputId">0</output></th>
             </tr>
             <!-- *instagramSpend -->
             <tr>
               <th scope="row">Instagram</th>
-              <th scope="col"><input type="range"  id="instagramInputId"  name="instagramSpend"value="24" min="1" max="100" oninput="instagramOutputId.value = instagramInputId.value">
+              <th scope="col"><input type="range"  id="instagramInputId"  name="instagramSpend"value="0" min="0" max="100" oninput="instagramOutputId.value = instagramInputId.value">
               </th>
-              <th scope="col"> <output id="instagramOutputId">24</output></th>
+              <th scope="col"> <output id="instagramOutputId">0</output></th>
             </tr>
             <!-- *facebookSpend -->
             <tr>
               <th scope="row">Facebook</th>
-              <th scope="col"><input type="range"  id="facebookInputId"  name="facebookSpend"value="24" min="1" max="100" oninput="facebookOutputId.value = facebookInputId.value">
+              <th scope="col"><input type="range"  id="facebookInputId"  name="facebookSpend"value="0" min="0" max="100" oninput="facebookOutputId.value = facebookInputId.value">
               </th>
-              <th scope="col"> <output id="facebookOutputId">24</output></th>
+              <th scope="col"> <output id="facebookOutputId">0</output></th>
             </tr>
             <!-- *twitterSpend -->
             <tr>
               <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="twitterInputId"  name="twitterSpend"value="24" min="1" max="100" oninput="twitterOutputId.value = twitterInputId.value">
+              <th scope="col"><input type="range"  id="twitterInputId"  name="twitterSpend"value="0" min="0" max="100" oninput="twitterOutputId.value = twitterInputId.value">
               </th>
-              <th scope="col"> <output id="twitterOutputId">24</output></th>
+              <th scope="col"> <output id="twitterOutputId">0</output></th>
             </tr>
             <!-- *whatsAppImSpend -->
             <tr>
               <th scope="row">Whatsapp/IM</th>
-              <th scope="col"><input type="range"  id="whatsAppImInputId"  name="whatsAppImSpend" value="24" min="1" max="100" oninput="whatsAppImOutputId.value = whatsAppImInputId.value">
+              <th scope="col"><input type="range"  id="whatsAppImInputId"  name="whatsAppImSpend" value="0" min="0" max="100" oninput="whatsAppImOutputId.value = whatsAppImInputId.value">
               </th>
-              <th scope="col"> <output id="whatsAppImOutputId">24</output></th>
+              <th scope="col"> <output id="whatsAppImOutputId">0</output></th>
             </tr>
             <!-- *emailSpend -->
             <tr>
               <th scope="row">Email</th>
-              <th scope="col"><input type="range"  id="emailInputId"  name="emailSpend" value="24" min="1" max="100" oninput="emailOutputId.value = emailInputId.value">
+              <th scope="col"><input type="range"  id="emailInputId"  name="emailSpend" value="0" min="0" max="100" oninput="emailOutputId.value = emailInputId.value">
               </th>
-              <th scope="col"> <output id="emailOutputId">24</output></th>
+              <th scope="col"> <output id="emailOutputId">0</output></th>
             </tr>
           </tbody>
         </table>
@@ -252,7 +253,8 @@
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">% Split</th>
+              <th scope="col">Percentage</th>
+              <th scope="col">00</th>
               
             </tr>
           </thead>
@@ -261,51 +263,51 @@
             <!-- *googleAwareness -->
             <tr>
               <th scope="row">Google</th>
-              <th scope="col"><input type="range"  id="googleAwarenessInputId"  name="googleAwareness"value="24" min="1" max="100" oninput="googleAwarenessOutputId.value = googleAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="googleAwarenessInputId"  name="googleAwareness" value="0" min="0" max="100" oninput="googleAwarenessOutputId.value = googleAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="googleAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="googleAwarenessOutputId">0</output></th>
             </tr>
             <!-- *linkedInAwareness -->
             <tr>
               <th scope="row">LinkedIn</th>
-              <th scope="col"><input type="range"  id="linkedInAwarenessInputId"  name="linkedInAwareness"value="24" min="1" max="100" oninput="linkedInAwarenessOutputId.value = linkedInAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="linkedInAwarenessInputId"  name="linkedInAwareness"value="0" min="0" max="100" oninput="linkedInAwarenessOutputId.value = linkedInAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="linkedInAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="linkedInAwarenessOutputId">0</output></th>
             </tr>
             <!-- *instagramAwareness -->
             <tr>
               <th scope="row">Instagram</th>
-              <th scope="col"><input type="range"  id="instagramAwarenessInputId"  name="instagramAwareness"value="24" min="1" max="100" oninput="instagramAwarenessOutputId.value = instagramAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="instagramAwarenessInputId"  name="instagramAwareness"value="0" min="0" max="100" oninput="instagramAwarenessOutputId.value = instagramAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="instagramAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="instagramAwarenessOutputId">0</output></th>
             </tr>
             <!-- *facebookAwareness -->
             <tr>
               <th scope="row">Facebook</th>
-              <th scope="col"><input type="range"  id="facebookAwarenessInputId"  name="facebookAwareness"value="24" min="1" max="100" oninput="facebookAwarenessOutputId.value = facebookAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="facebookAwarenessInputId"  name="facebookAwareness"value="0" min="0" max="100" oninput="facebookAwarenessOutputId.value = facebookAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="facebookAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="facebookAwarenessOutputId">0</output></th>
             </tr>
             <!-- *twitterAwareness -->
             <tr>
               <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="twitterAwarenessInputId"  name="twitterAwareness" value="24" min="1" max="100" oninput="twitterAwarenessOutputId.value = twitterAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="twitterAwarenessInputId"  name="twitterAwareness" value="0" min="0" max="100" oninput="twitterAwarenessOutputId.value = twitterAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="twitterAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="twitterAwarenessOutputId">0</output></th>
             </tr>
             <!-- *whatsAppImAwareness -->
             <tr>
-              <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="whatsAppImAwarenessInputId"  name="whatsAppImAwareness" value="24" min="1" max="100" oninput="whatsAppImAwarenessOutputId.value = whatsAppImAwarenessInputId.value">
+              <th scope="row">WhatsApp/IM</th>
+              <th scope="col"><input type="range"  id="whatsAppImAwarenessInputId"  name="whatsAppImAwareness" value="0" min="0" max="100" oninput="whatsAppImAwarenessOutputId.value = whatsAppImAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="whatsAppImAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="whatsAppImAwarenessOutputId">0</output></th>
             </tr>
             <!-- *emailAwareness -->
             <tr>
-              <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="emailAwarenessInputId"  name="emailAwareness" value="24" min="1" max="100" oninput="emailAwarenessOutputId.value = emailAwarenessInputId.value">
+              <th scope="row">Email</th>
+              <th scope="col"><input type="range"  id="emailAwarenessInputId"  name="emailAwareness" value="0" min="0" max="100" oninput="emailAwarenessOutputId.value = emailAwarenessInputId.value">
               </th>
-              <th scope="col"> <output id="emailAwarenessOutputId">24</output></th>
+              <th scope="col"> <output id="emailAwarenessOutputId">0</output></th>
             </tr>
           </tbody>
         </table>
@@ -322,7 +324,8 @@
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">% Split</th>
+              <th scope="col">Percentage</th>
+              <th scope="col">00</th>
               
             </tr>
           </thead>
@@ -331,51 +334,51 @@
             <!-- *googleLeadGen -->
             <tr>
               <th scope="row">Google</th>
-              <th scope="col"><input type="range"  id="googleLeadGenInputId"  name="googleLeadGen"value="24" min="1" max="100" oninput="googleLeadGenOutputId.value = googleLeadGenInputId.value">
+              <th scope="col"><input type="range"  id="googleLeadGenInputId"  name="googleLeadGen"value="0" min="0" max="100" oninput="googleLeadGenOutputId.value = googleLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="googleLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="googleLeadGenOutputId">0</output></th>
             </tr>
             <!-- *linkedInLeadGen -->
             <tr>
               <th scope="row">linkedIn</th>
-              <th scope="col"><input type="range"  id="linkedInLeadGenInputId"  name="linkedInLeadGen"value="24" min="1" max="100" oninput="linkedInLeadGenOutputId.value = linkedInLeadGenInputId.value">
+              <th scope="col"><input type="range"  id="linkedInLeadGenInputId"  name="linkedInLeadGen"value="0" min="0" max="100" oninput="linkedInLeadGenOutputId.value = linkedInLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="linkedInLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="linkedInLeadGenOutputId">0</output></th>
             </tr>
             <!-- *instagramLeadGen -->
             <tr>
               <th scope="row">Instagram</th>
-              <th scope="col"><input type="range"  id="instagramLeadGenInputId"  name="instagramLeadGen" value="24" min="1" max="100" oninput="instagramLeadGenOutputId.value = instagramLeadGenInputId.value">
+              <th scope="col"><input type="range"  id="instagramLeadGenInputId"  name="instagramLeadGen" value="0" min="0" max="100" oninput="instagramLeadGenOutputId.value = instagramLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="instagramLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="instagramLeadGenOutputId">0</output></th>
             </tr>
             <!-- *facebookLeadGen -->
             <tr>
               <th scope="row">Facebook</th>
-              <th scope="col"><input type="range"  id="facebookLeadGenInputId"  name="facebookLeadGen" value="24" min="1" max="100" oninput="facebookLeadGenOutputId.value = facebookLeadGenInputId.value">
+              <th scope="col"><input type="range"  id="facebookLeadGenInputId"  name="facebookLeadGen" value="0" min="0" max="100" oninput="facebookLeadGenOutputId.value = facebookLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="facebookLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="facebookLeadGenOutputId">0</output></th>
             </tr>
             <!-- *twitterLeadGen -->
             <tr>
               <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="twitterLeadGenInputId"  name="twitterLeadGen" value="24" min="1" max="100" oninput="twitterLeadGenOutputId.value = twitterLeadGenInputId.value">
+              <th scope="col"><input type="range"  id="twitterLeadGenInputId"  name="twitterLeadGen" value="0" min="0" max="100" oninput="twitterLeadGenOutputId.value = twitterLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="twitterLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="twitterLeadGenOutputId">0</output></th>
             </tr>
             <!-- *whatsAppImLeadGen -->
             <tr>
-              <th scope="row">linkedIn</th>
-              <th scope="col"><input type="range"  id="whatsAppImLeadGenInputId"  name="whatsAppImLeadGen" value="24" min="1" max="100" oninput="whatsAppImLeadGenOutputId.value = whatsAppImLeadGenInputId.value">
+              <th scope="row">WhatApp/IM</th>
+              <th scope="col"><input type="range"  id="whatsAppImLeadGenInputId"  name="whatsAppImLeadGen" value="0" min="0" max="100" oninput="whatsAppImLeadGenOutputId.value = whatsAppImLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="whatsAppImLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="whatsAppImLeadGenOutputId">0</output></th>
             </tr>
             <!-- *emailLeadGen -->
             <tr>
-              <th scope="row">linkedIn</th>
-              <th scope="col"><input type="range"  id="emailLeadGenInputId"  name="emailLeadGen" value="24" min="1" max="100" oninput="emailLeadGenOutputId.value = emailLeadGenInputId.value">
+              <th scope="row">Email</th>
+              <th scope="col"><input type="range"  id="emailLeadGenInputId"  name="emailLeadGen" value="0" min="0" max="100" oninput="emailLeadGenOutputId.value = emailLeadGenInputId.value">
               </th>
-              <th scope="col"> <output id="emailLeadGenOutputId">24</output></th>
+              <th scope="col"> <output id="emailLeadGenOutputId">0</output></th>
             </tr>
             
           </tbody>
@@ -398,6 +401,7 @@
             <tr>
               <th scope="col"></th>
               <th scope="col">% Split</th>
+              <th scope="col">00</th>
               
             </tr>
           </thead>
@@ -440,14 +444,14 @@
             </tr>
             <!-- *whatsAppImQLeads -->
             <tr>
-              <th scope="row">linkedIn</th>
+              <th scope="row">WhatsApp/IM</th>
               <th scope="col"><input type="range"  id="whatsAppImQLeadsInputId"  name="whatsAppImQLeads" value="0" min="0" max="100" oninput="whatsAppImQLeadsOutputId.value = whatsAppImQLeadsInputId.value">
               </th>
-              <th scope="col"> <output id="whatsAppImQLeadsOutputId">0</output></th>
+              <th scope="col"><output id="whatsAppImQLeadsOutputId">0</output></th>
             </tr>
             <!-- *emailQLeads -->
             <tr>
-              <th scope="row">linkedIn</th>
+              <th scope="row">Email</th>
               <th scope="col"><input type="range"  id="emailQLeadsInputId"  name="emailQLeads" value="0" min="0" max="100" oninput="emailQLeadsOutputId.value =emailQLeadsInputId.value">
               </th>
               <th scope="col"> <output id="emailQLeadsOutputId">0</output></th>
@@ -456,141 +460,142 @@
           </tbody>
         </table>
         <!--*--------------xx-----Marketing Tactics?*------xx--><!--FIXME: change the for, wrt the section -->
-        <label class="headingLabel" for="marketingChannel">What marketing tactics did you use in 2023
+        <label class="headingLabel" for="marketingTactics">What marketing tactics did you use in 2022
           <span class="required-span">*</span></label>
 
         <table class="table">
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">% Split</th>
+              <th scope="col">Select</th>
+             
               
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Email-based nurture</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="emailBasedNurture" value="yes" >
               </th>
             </tr>
 
             <tr>
               <th scope="row">Always-on ads</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="alwaysOnAds"  value="yes">
               </th>
             </tr>
 
             <tr>
               <th scope="row">Thematic campaign</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="thematicCampaign" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Offer-based ads</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="offerBasedAds" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Co-branded ads</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="coBranded" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">White papers</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="whitePaper" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Competition targeting</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="competitionTargeting" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Contests</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="contests" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Quizzes</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="quizzes" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Games</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="games" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Affiliate marketing</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="affiliateMarketing" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Influencer marketing</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="influencerMarketing" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Reels</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="reels" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Videos</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="videos" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Webinars/ online events</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="webinarsOnlineEEvents" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Podcast</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="podcast" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Mobile push-notifications</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="mobilePushNotification" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Case studies</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="caseStudies" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Reports</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="reports" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Testimonials</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="testimonials" value="yes">
               </th>
             </tr>
             
             <tr>
               <th scope="row">Other</th>
-              <th scope="col"><input type="checkbox" name="googleQLeads" >
+              <th scope="col"><input type="checkbox" name="otherTactics" value="yes">
               </th>
             </tr>
             
@@ -600,12 +605,22 @@
         </table>
         <!--*--------------xx----- Marketing Tactics*------xx-->
 
-        <label class="headingLabel" for="marketingChannel">Feature on this report
+        <label class="headingLabel" for="featureOnReport">Feature on this report
           .<span class="required-span">*</span></label>
          <!--FIXME: for labels-->
-         <label for="Feature on report"><input type="radio" name="featureOnReport" value="Feature on report" /> I would like to feature on this report</label>
-         <label for="Feature on report"><input type="radio" name="featureOnReport" value="Quote me without name" /> Quote me without name or company information</label>
-         <label for="Feature on report"><input type="radio" name="featureOnReport" value="Anonymous"/> I would like to remain anonymous</label>
+         <label for="featureOnReport"><input type="radio" name="featureOnReport" value="Feature on report" /> I would like to feature on this report</label>
+         <label for="featureOnReport"><input type="radio" name="featureOnReport" value="Quote me without name" /> Quote me without name or company information</label>
+         <label for="featureOnReport"><input type="radio" name="featureOnReport" value="Anonymous"/> I would like to remain anonymous</label>
+        <br>
+         <!--*-------------------------------------------------------------------->
+         
+        <label class="headingLabel" for="joinEnterprisePanel">Would you like to join the Enterprise Panel of Business Leaders
+          .<span class="required-span">*</span></label>
+          <p>Receive occasional opportunities to comment or feature in business news or stories. </p>
+         <!--FIXME: for labels-->
+         <label for="joinEnterprisePanel"><input type="radio" name="joinEnterprisePanel" value="yes" />Yes</label>
+         <label for="joinEnterprisePanel"><input type="radio" name="joinEnterprisePanel" value="no" /> No</label>
+         
         
 
 
