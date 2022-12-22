@@ -1,7 +1,113 @@
-label{
+/* body {
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+  /*done: added to main*/
+  /* body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  } */
+  /*done: added to main*/
+/* label{
     display: block;
 }
-
 .required-span{
    color: red;
-}
+} */
+/*done: added to main*/
+/* form {
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+} */
+/* progress bar style */
+/* .scroll-pb-header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+
+  .pb-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  .pb{
+    height: 8px;
+    background: red;
+    width: 0%;
+  } */
+
+  /* progress bar style */
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],textarea{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
+  
+  #other-text-1{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: 30px;
+    margin: 0;
+    outline: 0;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 0px;
+  }
+
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
+
+  input.rg_nm_ip{
+    all: initial !important;
+    
+    background: rgba(255,255,255,0.1)!important;
+    background-color: #e8eeef!important;
+    border:1px solid grey!important;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset!important;
+    text-align: center!important;
+    text-align: left!important;
+  }
+  
+  /* th:nth-child(3){
+    width:5px;
+  } */
+
+  tr:hover {background-color:#ede0d4;}

@@ -9,27 +9,100 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- recaptch cdn -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>Enterprise Trend Report Survey 2022</title>
     <style>
+       body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
         label{
     display: block;
+    font-size: 16px;
 }
 
 .required-span{
    color: red;
 }
+
+form {
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],textarea{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+#other-text-1{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: 30px;
+    margin: 0;
+    outline: 0;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    
+  }
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
     </style>
 </head>
 <body>
-    <!-- <h1 id="title">Enterprise Trend Report Survey 2022</h1>
-    <p id="description">Welcome to The Enterprise Marketing Trend Survey 2022. </p>
-    <p id="description">
-        Over the next few minutes, we will seek your input on a few, simple questions around industry & marketing trends you have observed, and expect to see in 2023.
-        Eligible responses stand a chance to win Amazon (India) gift vouchers of up to US$ 100 value (approximate, in INR). Please ensure accuracy across descriptive answers to enhance eligibility. 
-        Your contact information is required to validate responses, and will remain confidential. A choice to remain anonymous is provided at the end of the survey.
-        The Enterprise T&Cs apply. 
-    </p> -->
-    <form  id="trendsSuveryForm" method="POST" action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec">
+    <!--*Scroll porgress bar-->
+    <!-- <div class="scroll-pb-header">
+      <div class="pb-container">
+        <div class="pb" id="pb-bar">
+
+        </div>
+      </div>
+
+    </div> -->
+    <!-- action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec" -->
+    
+    <form  id="trendsSuveryForm" method="POST" action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec" >
         <!-- Fullname -->
         <label class="headingLabel">Full Name <span class="required-span">*</span></label>
         <input type="text" name="FullName" required />
@@ -46,23 +119,65 @@
          <label class="headingLabel" for="LinkedIn">LinkedIn Profile Link<span class="required-span">*</span></label>
          <input type="url" name="LinkedInURL"required/>
 
-
+         <hr class="solid" style="border-top: 3px solid #bbb;">
          <!--* SECTION 2 -->
          <!-- *marketing channels -->
          <label class="headingLabel" for="marketingChannel">Out of these, which channels do you use for marketing? Check all that apply.<span class="required-span">*</span></label>
          
-         <label for="google"><input type="checkbox" name="Google" value="yes" /> Google</label>
+         <!-- <label for="google"><input type="checkbox" name="Google" value="yes" /> Google</label>
          <label for="linkedIn"><input type="checkbox" name="LinkedIn" value="yes" /> LinkedIn</label>
          <label for="instagram"><input type="checkbox" name="Instagram" value="yes"/> Instagram</label>
          <label for="facebook"><input type="checkbox" name="Facebook" value="yes"/> Facebook</label>
          <label for="twitter"><input type="checkbox" name="Twitter" value="yes"/> Twitter</label>
          <label for="whatsappIm"><input type="checkbox" name="WhatsApp/IM" value="yes"/> WhatsApp/IM</label>
          <label for="email"><input type="checkbox" name="Email-C" value="yes"/> Email</label>
-         <label for="other"> Other <input name="Other" type="text"></label>
+         <label for="other"> Other <input name="Other" type="text"></label> -->
+<!-- *--------------- -->
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Select</th>
+      <th></th>
+      <th>Select</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><label for="google"> Google</label></td>
+      <td><input type="checkbox" name="Google" value="yes" /></td>
+      <td><label for="linkedIn"> LinkedIn</label></td>
+      <td><input type="checkbox" name="LinkedIn" value="yes" /></td>
+      
+    </tr>
+    <tr>
+      <td><label for="instagram"> Instagram</label></td>
+      <td><input type="checkbox" name="Instagram" value="yes"/></td>
+      <td><label for="facebook"> Facebook</label></td>
+      <td><input type="checkbox" name="Facebook" value="yes"/></td>
+    </tr>
+    <tr>
+      <td><label for="twitter"> Twitter</label></td>
+      <td><input type="checkbox" name="Twitter" value="yes"/></td>
+      <td><label for="whatsappIm"> WhatsApp/IM</label></td>
+      <td><input type="checkbox" name="WhatsApp/IM" value="yes"/></td>
+    </tr>
+    <tr>
+      <td> <label for="email"> Email</label></td>
+      <td><input type="checkbox" name="Email-C" value="yes"/></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      <td><label for="other"> Other </label></td>
+      <td colspan="3"><input name="Other" type="text" id="other-text-1"></td>
+      
+    </tr>
+  </tbody>
+</table>
 
-         <div>
-            <p>---------------------------------------------------------</p>
-         </div>
+         
          <!--*-------------------Channels effectiveness multichoice gird----------------------- -->
          <!--FIXME: change the for, wrt the section -->
          <label class="headingLabel" for="marketingChannel">Rate your chosen channels' effectiveness.
@@ -162,6 +277,7 @@
         <label class="headingLabel">What channel(s) will you absolutely use in 2023, and why?<span class="required-span">*</span></label>
         <textarea type="text" cols="60" rows="3" name="Focusing" required></textarea><br>
 
+        <hr class="solid" style="border-top: 3px solid #bbb;">
 
          <!--*Overall digital marketing spend in 2022?* Mention USD or INR -->
         <label class="headingLabel">What was your overall digital marketing spend in 2022?<span class="required-span">*</span><br>Mention USD or INR</label>
@@ -179,7 +295,7 @@
             <tr>
               <th scope="col"></th>
               <th scope="col">% Split</th>
-              <th scope="col">00</th>
+              <th scope="col"><span id="total" style="text-align: center">00</span></th>
               
             </tr>
           </thead>
@@ -188,9 +304,10 @@
             <!-- *googleSpend -->
             <tr>
               <th scope="row">Google</th>
-              <th scope="col"><input type="range"  id="googleInputId"  name="googleSpend"value="0" min="0" max="100" oninput="googleOutputId.value = googleInputId.value">
+              <th scope="col"><input type="range"  id="googleInputId"  name="googleSpend"value="0" min="0" max="100" oninput="changeInputValue(this.value)">
               </th>
-              <th scope="col"> <output id="googleOutputId">0</output></th>
+              <!-- <th scope="col"> <output id="googleOutputId">0</output></th> -->
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="googleInputId_nm" onkeyup="changeRangeValue(this.value)" onchange="handleChange(this)"></td>
             </tr>
              <!-- *LinkedInSpend -->
             <tr>
@@ -459,17 +576,17 @@
             
           </tbody>
         </table>
+        <hr class="solid" style="border-top: 3px solid #bbb;">
         <!--*--------------xx-----Marketing Tactics?*------xx--><!--FIXME: change the for, wrt the section -->
         <label class="headingLabel" for="marketingTactics">What marketing tactics did you use in 2022
           <span class="required-span">*</span></label>
-
-        <table class="table">
+          <table class="table">
           <thead>
             <tr>
               <th scope="col"></th>
               <th scope="col">Select</th>
-             
-              
+              <th scope="col"></th>
+              <th scope="col">Select</th>
             </tr>
           </thead>
           <tbody>
@@ -477,126 +594,113 @@
               <th scope="row">Email-based nurture</th>
               <th scope="col"><input type="checkbox" name="emailBasedNurture" value="yes" >
               </th>
-            </tr>
-
-            <tr>
               <th scope="row">Always-on ads</th>
               <th scope="col"><input type="checkbox" name="alwaysOnAds"  value="yes">
-              </th>
+              </td>
             </tr>
 
             <tr>
               <th scope="row">Thematic campaign</th>
               <th scope="col"><input type="checkbox" name="thematicCampaign" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">Offer-based ads</th>
               <th scope="col"><input type="checkbox" name="offerBasedAds" value="yes">
               </th>
             </tr>
             
+            
             <tr>
               <th scope="row">Co-branded ads</th>
               <th scope="col"><input type="checkbox" name="coBranded" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">White papers</th>
               <th scope="col"><input type="checkbox" name="whitePaper" value="yes">
               </th>
             </tr>
             
+            
+            
             <tr>
               <th scope="row">Competition targeting</th>
               <th scope="col"><input type="checkbox" name="competitionTargeting" value="yes">
               </th>
-            </tr>
-            
-            <tr>
-              <th scope="row">Contests</th>
+              <th scope="row">Contests</td>
               <th scope="col"><input type="checkbox" name="contests" value="yes">
               </th>
             </tr>
+            
+            
             
             <tr>
               <th scope="row">Quizzes</th>
               <th scope="col"><input type="checkbox" name="quizzes" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">Games</th>
               <th scope="col"><input type="checkbox" name="games" value="yes">
               </th>
             </tr>
             
+            
+            
             <tr>
               <th scope="row">Affiliate marketing</th>
               <th scope="col"><input type="checkbox" name="affiliateMarketing" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">Influencer marketing</th>
               <th scope="col"><input type="checkbox" name="influencerMarketing" value="yes">
               </th>
             </tr>
+           
             
             <tr>
               <th scope="row">Reels</th>
               <th scope="col"><input type="checkbox" name="reels" value="yes">
               </th>
-            </tr>
-            
-            <tr>
-              <th scope="row">Videos</th>
+              <th scope="row">Videos</td>
               <th scope="col"><input type="checkbox" name="videos" value="yes">
               </th>
             </tr>
+            
+           
             
             <tr>
               <th scope="row">Webinars/ online events</th>
               <th scope="col"><input type="checkbox" name="webinarsOnlineEEvents" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">Podcast</th>
               <th scope="col"><input type="checkbox" name="podcast" value="yes">
               </th>
             </tr>
+          h
+            
             
             <tr>
               <th scope="row">Mobile push-notifications</th>
               <th scope="col"><input type="checkbox" name="mobilePushNotification" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">Case studies</th>
               <th scope="col"><input type="checkbox" name="caseStudies" value="yes">
               </th>
             </tr>
             
+            
             <tr>
               <th scope="row">Reports</th>
               <th scope="col"><input type="checkbox" name="reports" value="yes">
               </th>
-            </tr>
-            
-            <tr>
               <th scope="row">Testimonials</th>
               <th scope="col"><input type="checkbox" name="testimonials" value="yes">
               </th>
             </tr>
             
+            
+            
             <tr>
               <th scope="row">Other</th>
               <th scope="col"><input type="checkbox" name="otherTactics" value="yes">
               </th>
+              <th scope="row"></th>
+              <th scope="col"></th>
             </tr>
             
           
@@ -621,48 +725,57 @@
          <label for="joinEnterprisePanel"><input type="radio" name="joinEnterprisePanel" value="yes" />Yes</label>
          <label for="joinEnterprisePanel"><input type="radio" name="joinEnterprisePanel" value="no" /> No</label>
          
-        
+         
+       <!-- done:Google recaptcha -->
+         <div class="g-recaptcha" data-sitekey="6Lev8pojAAAAAEBprqmWinEPrAWGJzNTw1akD8bG"></div>
 
 
          <!--*this is a comment -->
-        
+        <br>
           <!--!SUBMIT BUTTON-->
          <button type="submit" onclick="testBtn()">Submit</button>
-        
+
     </form>
+    
+  
+    <script src="./app.js"></script>
     
     <script>
     function testBtn(){
             console.log("button is pressed")
         }
+        let rangeGglIp = document.getElementById("googleInputId");
+let rangeLiIp= document.getElementById("linkedInInputId");
+let rangeInstaIp= document.getElementById("instagramInputId");
+let rangeFbIp= document.getElementById("facebookInputId");
+let totalValue= document.getElementById("total");
+
+// *Calulate Total Range and update in top of the table
+function calculateTotal(){
+    let total = Number(rangeGglIp.value) + Number(rangeLiIp.value) + Number(rangeInstaIp.value)+ Number(rangeFbIp.value);
+    totalValue.innerHTML=total;
+}
+
+rangeGglIp.addEventListener("input", calculateTotal);
+rangeLiIp.addEventListener("input", calculateTotal);
+rangeInstaIp.addEventListener("input", calculateTotal);
+rangeFbIp.addEventListener("input", calculateTotal);
+
+//*Alert users that the total  range of the inputs should notbe above 100
+function updateTotalRange(){
+    let totalRange = parseInt(rangeGglIp.value)+parseInt(rangeLiIp.value) + parseInt(rangeInstaIp.value) + parseInt(rangeFbIp.value);
+    if(totalRange>100){
+        alert("total range cannot be above 100")
+    }
+}
+rangeGglIp.addEventListener("change",  updateTotalRange);
+rangeLiIp.addEventListener("change",  updateTotalRange);
+rangeInstaIp.addEventListener("change",  updateTotalRange);
+rangeFbIp.addEventListener("change",  updateTotalRange);
+       
 
     </script>
-    
-<!-- 
-    <script>
-        const form = document.querySelector('#trendsSuveryForm')
-        const submitButton = document.querySelector("#submit")
-        const scriptURL='https://script.google.com/macros/library/d/1YAg0fQRyOgaLF1dpb-OQIL7g84Dz3xhAx3ZjFxDIaEPDkBEO-QuCH0Di/1'
-    
-        form.addEventListener('submit', e => {
-         submitButton.disabled = true
-         e.preventDefault()
-         let requestBody = new FormData(form)
-         fetch(scriptURL, { method: 'POST', body: requestBody})
-           .then(response => {
-              alert('Success!', response)
-              submitButton.disabled = false
-             })
-           .catch(error => {
-           alert('Error!', error.message)
-             submitButton.disabled = false
-    
-           }
-           )
-       })
-    
-    
-    </script> -->
+   
 </body>
 
 </html>
