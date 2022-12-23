@@ -398,37 +398,39 @@ input[type="text"],
             <!-- *instagramAwareness -->
             <tr>
               <th scope="row">Instagram</th>
-              <th scope="col"><input type="range"  id="instagramAwarenessInputId"  name="instagramAwareness"value="0" min="0" max="100" oninput="instagramAwarenessOutputId.value = instagramAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="instagramAwarenessInputId"  name="instagramAwareness"value="0" min="0" max="100" oninput="changeInputValueAwIns(this.value)">
               </th>
-              <th scope="col"> <output id="instagramAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="instagramAwarenessInputId_nm" onkeyup="changeRangeValueAwIns(this.value)" onchange="handleChange(this)"></td>
+            </tr>
             </tr>
             <!-- *facebookAwareness -->
             <tr>
               <th scope="row">Facebook</th>
-              <th scope="col"><input type="range"  id="facebookAwarenessInputId"  name="facebookAwareness"value="0" min="0" max="100" oninput="facebookAwarenessOutputId.value = facebookAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="facebookAwarenessInputId"  name="facebookAwareness"value="0" min="0" max="100" oninput="changeInputValueAwFb(this.value)">
               </th>
-              <th scope="col"> <output id="facebookAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="facebookAwarenessInputId_nm" onkeyup="changeRangeValueAwFb(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *twitterAwareness -->
             <tr>
               <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="twitterAwarenessInputId"  name="twitterAwareness" value="0" min="0" max="100" oninput="twitterAwarenessOutputId.value = twitterAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="twitterAwarenessInputId"  name="twitterAwareness" value="0" min="0" max="100" oninput="changeInputValueAwTw(this.value)">
               </th>
-              <th scope="col"> <output id="twitterAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="twitterAwarenessInputId_nm" onkeyup="changeRangeValueAwTw(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *whatsAppImAwareness -->
             <tr>
               <th scope="row">WhatsApp/IM</th>
-              <th scope="col"><input type="range"  id="whatsAppImAwarenessInputId"  name="whatsAppImAwareness" value="0" min="0" max="100" oninput="whatsAppImAwarenessOutputId.value = whatsAppImAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="whatsAppImAwarenessInputId"  name="whatsAppImAwareness" value="0" min="0" max="100" oninput="changeInputValueAwWa(this.value)">
               </th>
-              <th scope="col"> <output id="whatsAppImAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="whatsAppImAwarenessInputId_nm" onkeyup="changeRangeValueAwWa(this.value)" onchange="handleChange(this)"></td>
+              
             </tr>
             <!-- *emailAwareness -->
             <tr>
               <th scope="row">Email</th>
-              <th scope="col"><input type="range"  id="emailAwarenessInputId"  name="emailAwareness" value="0" min="0" max="100" oninput="emailAwarenessOutputId.value = emailAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="emailAwarenessInputId"  name="emailAwareness" value="0" min="0" max="100" oninput="changeInputValueAwEm(this.value)">
               </th>
-              <th scope="col"> <output id="emailAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="emailAwarenessInputId_nm" onkeyup="changeRangeValueAwEm(this.value)" onchange="handleChange(this)"></td>
             </tr>
           </tbody>
         </table>

@@ -52,12 +52,72 @@ function changeInputValueAwLi(val){
     showValue1(val);
 }
 
-//TODO: Instagram
+//DONE: Instagram
+//? range input id-> instagramAwarenessInputId
+//? num input id --> instagramAwarenessInputId_nm
 
-//TODO: Facebook
+function changeRangeValueAwIns(val){
+    document.getElementById("instagramAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwIns(val){
+    document.getElementById("instagramAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
 
-//TODO: Twitter
 
-//TODO: WhatsApp/IM
+//Done: Facebook
+//? range input id-> facebookAwarenessInputId
+//? num input id --> facebookAwarenessInputId_nm
 
-//TODO: Email
+function changeRangeValueAwFb(val){
+    document.getElementById("facebookAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwFb(val){
+    document.getElementById("facebookAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+//DONE: Twitter
+//? range input id-> twitterAwarenessInputId
+//? num input id --> twitterAwarenessInputId_nm
+
+function changeRangeValueAwTw(val){
+    document.getElementById("twitterAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwTw(val){
+    document.getElementById("twitterAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+//Done: WhatsApp/IM
+//? range input id-> whatsAppImAwarenessInputId
+//? num input id --> whatsAppImAwarenessInputId_nm
+
+function changeRangeValueAwWa(val){
+    document.getElementById("whatsAppImAwarenessInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    // console.log('Wa input is working')
+}
+function changeInputValueAwWa(val){
+    document.getElementById("whatsAppImAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+
+//Done: Email
+//? range input id-> emailAwarenessInputId
+//? num input id --> emailAwarenessInputId_nm
+
+function changeRangeValueAwEm(val){
+    document.getElementById("emailAwarenessInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    // console.log('Wa input is working')
+}
+function changeInputValueAwEm(val){
+    document.getElementById("emailAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
