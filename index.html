@@ -103,6 +103,7 @@ input[type="text"],
     <!-- action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec" -->
     
     <form  id="trendsSuveryForm" method="POST" action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec" >
+      <div class="section_1" >
         <!-- Fullname -->
         <label class="headingLabel">Full Name <span class="required-span">*</span></label>
         <input type="text" name="FullName" required />
@@ -118,8 +119,10 @@ input[type="text"],
          <!-- *LinkedIn profile -->
          <label class="headingLabel" for="LinkedIn">LinkedIn Profile Link<span class="required-span">*</span></label>
          <input type="url" name="LinkedInURL"required/>
+        </div>
 
          <hr class="solid" style="border-top: 3px solid #bbb;">
+       
          <!--* SECTION 2 -->
          <!-- *marketing channels -->
          <label class="headingLabel" for="marketingChannel">Out of these, which channels do you use for marketing? Check all that apply.<span class="required-span">*</span></label>
@@ -132,6 +135,7 @@ input[type="text"],
          <label for="whatsappIm"><input type="checkbox" name="WhatsApp/IM" value="yes"/> WhatsApp/IM</label>
          <label for="email"><input type="checkbox" name="Email-C" value="yes"/> Email</label>
          <label for="other"> Other <input name="Other" type="text"></label> -->
+        
 <!-- *--------------- -->
 <table class="table">
   <thead>
@@ -312,44 +316,44 @@ input[type="text"],
              <!-- *LinkedInSpend -->
             <tr>
               <th scope="row">LinkedIn</th>
-              <th scope="col"><input type="range"  id="linkedInInputId"  name="linkedInSpend"value="0" min="0" max="100" oninput="linkedInOutputId.value = linkedInInputId.value">
+              <th scope="col"><input type="range"  id="linkedInInputId"  name="linkedInSpend"value="0" min="0" max="100" oninput="changeInputValueLi(this.value)">
               </th>
-              <th scope="col"> <output id="linkedInOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="linkedInInputId_nm" onkeyup="changeRangeValueLi(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *instagramSpend -->
             <tr>
               <th scope="row">Instagram</th>
-              <th scope="col"><input type="range"  id="instagramInputId"  name="instagramSpend"value="0" min="0" max="100" oninput="instagramOutputId.value = instagramInputId.value">
+              <th scope="col"><input type="range"  id="instagramInputId"  name="instagramSpend"value="0" min="0" max="100" oninput="changeInputValueIns(this.value)">
               </th>
-              <th scope="col"> <output id="instagramOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="instagramInputId_nm" onkeyup="changeRangeValueIns(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *facebookSpend -->
             <tr>
               <th scope="row">Facebook</th>
-              <th scope="col"><input type="range"  id="facebookInputId"  name="facebookSpend"value="0" min="0" max="100" oninput="facebookOutputId.value = facebookInputId.value">
+              <th scope="col"><input type="range"  id="facebookInputId"  name="facebookSpend"value="0" min="0" max="100" oninput="changeInputValueIFb(this.value)">
               </th>
-              <th scope="col"> <output id="facebookOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="facebookInputId_nm" onkeyup="changeRangeValueFb(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *twitterSpend -->
             <tr>
               <th scope="row">Twitter</th>
-              <th scope="col"><input type="range"  id="twitterInputId"  name="twitterSpend"value="0" min="0" max="100" oninput="twitterOutputId.value = twitterInputId.value">
+              <th scope="col"><input type="range"  id="twitterInputId"  name="twitterSpend"value="0" min="0" max="100" oninput="changeInputValueITw(this.value)">
               </th>
-              <th scope="col"> <output id="twitterOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="twitterInputId_nm" onkeyup="changeRangeValueTw(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *whatsAppImSpend -->
             <tr>
               <th scope="row">Whatsapp/IM</th>
-              <th scope="col"><input type="range"  id="whatsAppImInputId"  name="whatsAppImSpend" value="0" min="0" max="100" oninput="whatsAppImOutputId.value = whatsAppImInputId.value">
+              <th scope="col"><input type="range"  id="whatsAppImInputId"  name="whatsAppImSpend" value="0" min="0" max="100" oninput="changeInputValueWa(this.value)">
               </th>
-              <th scope="col"> <output id="whatsAppImOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="whatsAppImInputId_nm" onkeyup="changeRangeValueWa(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *emailSpend -->
             <tr>
               <th scope="row">Email</th>
-              <th scope="col"><input type="range"  id="emailInputId"  name="emailSpend" value="0" min="0" max="100" oninput="emailOutputId.value = emailInputId.value">
+              <th scope="col"><input type="range"  id="emailInputId"  name="emailSpend" value="0" min="0" max="100" oninput="changeInputValueEm(this.value)">
               </th>
-              <th scope="col"> <output id="emailOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="emailInputId_nm" onkeyup="changeRangeValueEm(this.value)" onchange="handleChange(this)"></td>
             </tr>
           </tbody>
         </table>
@@ -371,7 +375,7 @@ input[type="text"],
             <tr>
               <th scope="col"></th>
               <th scope="col">Percentage</th>
-              <th scope="col">00</th>
+              <th scope="col"><span id="totalAw-sp" style="text-align: center">00</span></th>
               
             </tr>
           </thead>
@@ -380,16 +384,16 @@ input[type="text"],
             <!-- *googleAwareness -->
             <tr>
               <th scope="row">Google</th>
-              <th scope="col"><input type="range"  id="googleAwarenessInputId"  name="googleAwareness" value="0" min="0" max="100" oninput="googleAwarenessOutputId.value = googleAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="googleAwarenessInputId"  name="googleAwareness" value="0" min="0" max="100" oninput="changeInputValueAwGgl(this.value)">
               </th>
-              <th scope="col"> <output id="googleAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="googleAwarenessInputId_nm" onkeyup="changeRangeValueAwGgl(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *linkedInAwareness -->
             <tr>
               <th scope="row">LinkedIn</th>
-              <th scope="col"><input type="range"  id="linkedInAwarenessInputId"  name="linkedInAwareness"value="0" min="0" max="100" oninput="linkedInAwarenessOutputId.value = linkedInAwarenessInputId.value">
+              <th scope="col"><input type="range"  id="linkedInAwarenessInputId"  name="linkedInAwareness"value="0" min="0" max="100" oninput="changeInputValueAwLi(this.value)">
               </th>
-              <th scope="col"> <output id="linkedInAwarenessOutputId">0</output></th>
+              <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="linkedInAwarenessInputId_nm" onkeyup="changeRangeValueAwLi(this.value)" onchange="handleChange(this)"></td>
             </tr>
             <!-- *instagramAwareness -->
             <tr>
@@ -509,7 +513,7 @@ input[type="text"],
 
         <!--*------------------- channel delivered the maximum qualified leads*----------------------- -->
         <!--FIXME: change the for, wrt the section -->
-        <label class="headingLabel" for="marketingChannel">How did each channel perform in terms of lead generation
+        <label class="headingLabel" for="marketingChannel">Performance: Which channel delivered the maximum qualified leads?
           <span class="required-span">*</span></label>
           <p>Mention the percentage split across channels. E.g. 30% of leads from Google were qualified. </p>
        
@@ -596,7 +600,7 @@ input[type="text"],
               </th>
               <th scope="row">Always-on ads</th>
               <th scope="col"><input type="checkbox" name="alwaysOnAds"  value="yes">
-              </td>
+              </th>
             </tr>
 
             <tr>
@@ -737,8 +741,9 @@ input[type="text"],
 
     </form>
     
-  
+    <!--done: External js scripts -->
     <script src="./app.js"></script>
+    <script src="./brandAwarnessLogic.js"></script>
     
     <script>
     function testBtn(){
