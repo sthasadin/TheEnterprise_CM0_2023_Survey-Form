@@ -18,7 +18,7 @@
     font-family: 'Nunito', sans-serif;
     color: #384047;
   }
-        label{
+    label{
     display: block;
     font-size: 16px;
 }
@@ -51,7 +51,7 @@ input[type="text"],
     background-color: #e8eeef;
     color: #000000;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    margin-bottom: 30px;
+    margin-bottom: 30px; border-radius: 5px;
   }
   input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -72,6 +72,7 @@ input[type="text"],
     background-color: #e8eeef;
     color: #000000;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 0px;
     
   }
   button {
@@ -82,26 +83,31 @@ input[type="text"],
     text-align: center;
     font-style: normal;
     border-radius: 5px;
-    width: 100%;
+    width: 100%; 
     border: 1px solid #3ac162;
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
   }
+  input.rg_nm_ip{
+    all: initial !important;
+    
+    background: rgba(255,255,255,0.1)!important;
+    background-color: #e8eeef!important;
+    border:1px solid grey!important;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset!important;
+    text-align: center!important;
+    text-align: left!important;
+  }
+  tr:hover {background-color:#ede0d4;}
+  select option{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+  }
     </style>
 </head>
-<body>
-    <!--*Scroll porgress bar-->
-    <!-- <div class="scroll-pb-header">
-      <div class="pb-container">
-        <div class="pb" id="pb-bar">
-
-        </div>
-      </div>
-
-    </div> -->
-    <!-- action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec" -->
-    
+<body>    
     <form  id="trendsSuveryForm" method="POST" action="https://script.google.com/macros/s/AKfycbxxgwtVulLFP7-pG2OAjGwHrlx85p-K5qcTjpO4p4DFnH_fj6dB9Ej-wlAUmNGSo23IEw/exec" >
       <div class="section_1" >
         <!-- Fullname -->
@@ -126,15 +132,6 @@ input[type="text"],
          <!--* SECTION 2 -->
          <!-- *marketing channels -->
          <label class="headingLabel" for="marketingChannel">Out of these, which channels do you use for marketing? Check all that apply.<span class="required-span">*</span></label>
-         
-         <!-- <label for="google"><input type="checkbox" name="Google" value="yes" /> Google</label>
-         <label for="linkedIn"><input type="checkbox" name="LinkedIn" value="yes" /> LinkedIn</label>
-         <label for="instagram"><input type="checkbox" name="Instagram" value="yes"/> Instagram</label>
-         <label for="facebook"><input type="checkbox" name="Facebook" value="yes"/> Facebook</label>
-         <label for="twitter"><input type="checkbox" name="Twitter" value="yes"/> Twitter</label>
-         <label for="whatsappIm"><input type="checkbox" name="WhatsApp/IM" value="yes"/> WhatsApp/IM</label>
-         <label for="email"><input type="checkbox" name="Email-C" value="yes"/> Email</label>
-         <label for="other"> Other <input name="Other" type="text"></label> -->
         
 <!-- *--------------- -->
 <table class="table">
@@ -148,9 +145,9 @@ input[type="text"],
   </thead>
   <tbody>
     <tr>
-      <td><label for="Google"> Google</label></td>
+      <td><label for="google"> Google</label></td>
       <td><input type="checkbox" name="Google" value="yes" /></td>
-      <td><label for="LinkedIn"> LinkedIn</label></td>
+      <td><label for="linkedIn"> LinkedIn</label></td>
       <td><input type="checkbox" name="LinkedIn" value="yes" /></td>
       
     </tr>
@@ -287,23 +284,11 @@ input[type="text"],
         <label style="all:initial;  font-family: 'Nunito', sans-serif; font-weight: bold;color: #384047;" class="headingLabel">What was your overall digital marketing spend in 2022?<span class="required-span">*</span></label>
         <br><p>Mention USD or INR</p>
         <select class="form-group" name="cr_select_2022" id="cr_select_2022" required>
-          <option value="USD">USD</option>
-          <option value="INR">INR</option>
-        </select>
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+          </select>
         <input type="text" name="OverallMarketingSpend2022"><br>
-        <!--!-----------test------------- -->
-        <!-- <table class="table">
-          <tbody>
-            <tr>
-              <td><select class="form-group" name="cr_select" id="cr_select" required>
-                <option value="USD">USD</option>
-                <option value="INR">INR</option>
-              </select></td>
-              <td><input  type="text" name="OverallMarketingSpend2022"></td>
-            </tr>
-          </tbody>
-        </table> -->
-        <!--!-----------test------------- -->
+        
 
          <!--*-------------------Tell us the split fo your overall digital marketing spends multichoice gird----------------------- -->
          <!--FIXME: change the for, wrt the section -->
@@ -326,7 +311,6 @@ input[type="text"],
               <th scope="row">Google</th>
               <th scope="col"><input type="range"  id="googleInputId"  name="googleSpend"value="0" min="0" max="100" oninput="changeInputValue(this.value)">
               </th>
-              <!-- <th scope="col"> <output id="googleOutputId">0</output></th> -->
               <td scope="col" class="num_td" > <input class="rg_nm_ip" type="number"min="0.00" max="100.00" id="googleInputId_nm" onkeyup="changeRangeValue(this.value)" onchange="handleChange(this)"></td>
             </tr>
              <!-- *LinkedInSpend -->
@@ -378,9 +362,9 @@ input[type="text"],
         <!--*Planned Digital Marketing budget for 2023 -->
         <label class="headingLabel">What's your planned Digital Marketing Budget for 2023?<span class="required-span">*</span></label>
         <select class="form-group" name="cr_select_2023" id="cr_select_2023" required>
-          <option value="USD">USD</option>
-          <option value="INR">INR</option>
-        </select>
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+          </select>
         <input type="text" name="OverallMarketingSpend2023"><br>
 
 
@@ -400,7 +384,7 @@ input[type="text"],
             </tr>
           </thead>
           <tbody>
-            <!--!contains range logic-->
+           
             <!-- *googleAwareness -->
             <tr>
               <th scope="row">Google</th>
@@ -544,7 +528,7 @@ input[type="text"],
             <tr>
               <th scope="col"></th>
               <th scope="col">% Split</th>
-              <!-- <th scope="col"><span id="totalQl-sp" style="text-align: center">00</span></th> -->
+             
               
             </tr>
           </thead>
@@ -603,7 +587,7 @@ input[type="text"],
           </tbody>
         </table>
         <hr class="solid" style="border-top: 3px solid #bbb;">
-        <!--*--------------xx-----Marketing Tactics?*------xx-->
+        <!--*--------------xx-----Marketing Tactics?*------xx--><!--FIXME: change the for, wrt the section -->
         <label class="headingLabel" for="marketingTactics">What marketing tactics did you use in 2022
           <span class="required-span">*</span></label>
           <table class="table">
@@ -761,50 +745,434 @@ input[type="text"],
           <!--!SUBMIT BUTTON-->
          <button type="submit" onclick="testBtn()">Submit</button>
 
-    </form>
-    
-    <!--done: External js scripts -->
-    <script src="./app.js"></script>
-    <script src="./DmSpendSplit.js"></script>
-    <script src="./brandAwarnessLogic.js"></script>
-    <script src="./leadGen.js"></script>
-    <script src="./maxQLeads.js"></script>
-    
+    </form>    
     <script>
     function testBtn(){
             console.log("button is pressed")
         }
-        let rangeGglIp = document.getElementById("googleInputId");
+//---DIGITAL MARKETING SPEND----------        
+function changeRangeValue(val){
+    document.getElementById("googleInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValue(val){
+    document.getElementById("googleInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueLi(val){
+    document.getElementById("linkedInInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLi(val){
+    document.getElementById("linkedInInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueIns(val){
+    document.getElementById("instagramInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueIns(val){
+    document.getElementById("instagramInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueFb(val){
+    document.getElementById("facebookInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueIFb(val){
+    document.getElementById("facebookInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueTw(val){
+    document.getElementById("twitterInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueITw(val){
+    document.getElementById("twitterInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueWa(val){
+    document.getElementById("whatsAppImInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueWa(val){
+    document.getElementById("whatsAppImInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueEm(val){
+    document.getElementById("emailInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueEm(val){
+    document.getElementById("emailInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+let rangeGglIp = document.getElementById("googleInputId");
 let rangeLiIp= document.getElementById("linkedInInputId");
 let rangeInstaIp= document.getElementById("instagramInputId");
 let rangeFbIp= document.getElementById("facebookInputId");
+let rangeTwIp= document.getElementById("twitterInputId");
+let rangeWpIp= document.getElementById("whatsAppImInputId");
+let rangeEmIp= document.getElementById("emailInputId");
+
+
 let totalValue= document.getElementById("total");
 
 // *Calulate Total Range and update in top of the table
 function calculateTotal(){
-    let total = Number(rangeGglIp.value) + Number(rangeLiIp.value) + Number(rangeInstaIp.value)+ Number(rangeFbIp.value);
+    let total = Number(rangeGglIp.value) + Number(rangeLiIp.value) + Number(rangeInstaIp.value)+ Number(rangeFbIp.value)+ Number(rangeTwIp.value)+ Number(rangeWpIp.value)+ Number(rangeEmIp.value);
     totalValue.innerHTML=total;
+    if(total>100){
+       
+        document.getElementById("total").style.backgroundColor="red";
+        document.getElementById("total").style.borderRadius="20%";
+        document.getElementById("total").style.paddingLeft="2px";
+        document.getElementById("total").style.paddingRight="2px";
+        document.getElementById("total").style.color="white";
+    } 
+    if(total<=100){
+        document.getElementById("total").style.color="green";
+        document.getElementById("total").style.backgroundColor="transparent";
+    }
 }
 
 rangeGglIp.addEventListener("input", calculateTotal);
 rangeLiIp.addEventListener("input", calculateTotal);
 rangeInstaIp.addEventListener("input", calculateTotal);
 rangeFbIp.addEventListener("input", calculateTotal);
+rangeTwIp.addEventListener("input", calculateTotal);
+rangeWpIp.addEventListener("input", calculateTotal);
+rangeEmIp.addEventListener("input", calculateTotal);
 
-//*Alert users that the total  range of the inputs should notbe above 100
-function updateTotalRange(){
-    let totalRange = parseInt(rangeGglIp.value)+parseInt(rangeLiIp.value) + parseInt(rangeInstaIp.value) + parseInt(rangeFbIp.value);
+function promptTotalRange(){
+    let totalRange = parseInt(rangeGglIp.value)+parseInt(rangeLiIp.value) + parseInt(rangeInstaIp.value) + parseInt(rangeFbIp.value)+ parseInt(rangeTwIp.value)+ parseInt(rangeWpIp.value)+ parseInt(rangeEmIp.value);
     if(totalRange>100){
-        alert("total range cannot be above 100")
+        alert("🤔😮Total split percentage TOTAL cannot be above 100");
+       
     }
 }
-rangeGglIp.addEventListener("change",  updateTotalRange);
-rangeLiIp.addEventListener("change",  updateTotalRange);
-rangeInstaIp.addEventListener("change",  updateTotalRange);
-rangeFbIp.addEventListener("change",  updateTotalRange);
-       
+rangeGglIp.addEventListener("change",  promptTotalRange);
+rangeLiIp.addEventListener("change",  promptTotalRange);
+rangeInstaIp.addEventListener("change",  promptTotalRange);
+rangeFbIp.addEventListener("change",  promptTotalRange);
+rangeTwIp.addEventListener("change",  promptTotalRange);
+rangeWpIp.addEventListener("change",  promptTotalRange);
+rangeEmIp.addEventListener("change",  promptTotalRange);
 
-    </script>
+//* ------BRAND AWARNESS LOGIC---------------------------
+let rangeAwGglIp = document.getElementById("googleAwarenessInputId");
+let rangeAwLiIp= document.getElementById("linkedInAwarenessInputId");
+let rangeAwInstaIp= document.getElementById("instagramAwarenessInputId");
+let rangeAwFbIp= document.getElementById("facebookAwarenessInputId");
+let rangeAwTwIp= document.getElementById("twitterAwarenessInputId");
+let rangeAwWpIp= document.getElementById("whatsAppImAwarenessInputId");
+let rangeAwEmIp= document.getElementById("emailAwarenessInputId");
+
+let totalAwValue = document.getElementById("totalAw-sp")
+
+function calculateAwTotal(){
+    let totalAw =Number(rangeAwGglIp.value)+Number(rangeAwLiIp.value)+Number(rangeAwInstaIp.value)+Number(rangeAwFbIp.value)+Number(rangeAwTwIp.value)+ Number(rangeAwWpIp.value)+ Number(rangeAwEmIp.value);
+
+    totalAwValue.innerHTML = totalAw;
+    console.log("awarness is working")
+    console.log(totalAw)
+    if(totalAw>100){
+        document.getElementById("totalAw-sp").style.backgroundColor="red";
+        document.getElementById("totalAw-sp").style.borderRadius="20%";
+        document.getElementById("totalAw-sp").style.paddingLeft="2px";
+        document.getElementById("totalAw-sp").style.paddingRight="2px";
+        document.getElementById("totalAw-sp").style.color="white";
+        
+    }else{
+        document.getElementById("totalAw-sp").style.color="green";
+        document.getElementById("totalAw-sp").style.backgroundColor="transparent";
+    }
+    
+}
+
+rangeAwGglIp.addEventListener("input", calculateAwTotal);
+rangeAwLiIp.addEventListener("input", calculateAwTotal);
+rangeAwInstaIp.addEventListener("input", calculateAwTotal);
+rangeAwFbIp.addEventListener("input", calculateAwTotal);
+rangeAwTwIp.addEventListener("input", calculateAwTotal);
+rangeAwWpIp.addEventListener("input", calculateAwTotal);
+rangeAwEmIp.addEventListener("input", calculateAwTotal);
+//*Alert users that the total  range of the inputs should notbe above 100
+rangeAwGglIp.addEventListener("change", promptTotalRangeAw);
+rangeAwLiIp.addEventListener("change", promptTotalRangeAw);
+rangeAwInstaIp.addEventListener("change", promptTotalRangeAw);
+rangeAwFbIp.addEventListener("change", promptTotalRangeAw);
+rangeAwTwIp.addEventListener("change", promptTotalRangeAw);
+rangeAwWpIp.addEventListener("change", promptTotalRangeAw);
+rangeAwEmIp.addEventListener("change", promptTotalRangeAw);
+
+//*Alert users that the total  range of the inputs should notbe above 100
+function promptTotalRangeAw(){
+    let totalRangeAw =Number(rangeAwGglIp.value)+Number(rangeAwLiIp.value)+Number(rangeAwInstaIp.value)+Number(rangeAwFbIp.value)+Number(rangeAwTwIp.value)+ Number(rangeAwWpIp.value)+ Number(rangeAwEmIp.value);
+    if(totalRangeAw>100){
+        alert("🤔😮Total split percentage TOTAL cannot be above 100")
+
+    }
+}
+
+function changeRangeValueAwGgl(val){
+    document.getElementById("googleAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwGgl(val){
+    document.getElementById("googleAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+
+function changeRangeValueAwLi(val){
+    document.getElementById("linkedInAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwLi(val){
+    document.getElementById("linkedInAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueAwIns(val){
+    document.getElementById("instagramAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwIns(val){
+    document.getElementById("instagramAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueAwFb(val){
+    document.getElementById("facebookAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwFb(val){
+    document.getElementById("facebookAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueAwTw(val){
+    document.getElementById("twitterAwarenessInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwTw(val){
+    document.getElementById("twitterAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueAwWa(val){
+    document.getElementById("whatsAppImAwarenessInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+function changeInputValueAwWa(val){
+    document.getElementById("whatsAppImAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+
+function changeRangeValueAwEm(val){
+    document.getElementById("emailAwarenessInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueAwEm(val){
+    document.getElementById("emailAwarenessInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+//--------LEAD GENERATION LOGIC
+let rangeLgGglIp = document.getElementById("googleLeadGenInputId");
+let rangeLgLiIp = document.getElementById("linkedInLeadGenInputId");
+let rangeLgInstaIp= document.getElementById("instagramLeadGenInputId");
+let rangeLgFbIp= document.getElementById("facebookLeadGenInputId");
+let rangeLgTwIp= document.getElementById("twitterLeadGenInputId");
+let rangeLgWpIp= document.getElementById("whatsAppImLeadGenInputId");
+let rangeLgEmIp= document.getElementById("emailLeadGenInputId");
+
+let totalLgValue = document.getElementById("totalLg-sp");
+
+function calculateLgTotal(){
+    let totalLg =Number(rangeLgGglIp.value)+Number(rangeLgLiIp.value)+Number(rangeLgInstaIp.value)+Number(rangeLgFbIp.value)+Number(rangeLgTwIp.value)+ Number(rangeLgWpIp.value)+ Number(rangeLgEmIp.value);
+
+    totalLgValue.innerHTML = totalLg;
+    if(totalLg>100){
+        document.getElementById("totalLg-sp").style.backgroundColor="red";
+        document.getElementById("totalLg-sp").style.borderRadius="20%";
+        document.getElementById("totalLg-sp").style.paddingLeft="2px";
+        document.getElementById("totalLg-sp").style.paddingRight="2px";
+        document.getElementById("totalLg-sp").style.color="white";
+    }else{
+        document.getElementById("totalLg-sp").style.color="green";
+        document.getElementById("totalLg-sp").style.backgroundColor="transparent";
+    }
+}
+
+rangeLgGglIp.addEventListener("input", calculateLgTotal);
+rangeLgLiIp.addEventListener("input", calculateLgTotal);
+rangeLgInstaIp.addEventListener("input", calculateLgTotal);
+rangeLgFbIp.addEventListener("input", calculateLgTotal);
+rangeLgTwIp.addEventListener("input", calculateLgTotal);
+rangeLgWpIp.addEventListener("input", calculateLgTotal);
+rangeLgEmIp.addEventListener("input", calculateLgTotal);
+//*Alert users that the total  range of the inputs should notbe above 100
+rangeLgGglIp.addEventListener("change", promptTotalRangeLg);
+rangeLgLiIp.addEventListener("change", promptTotalRangeLg);
+rangeLgInstaIp.addEventListener("change", promptTotalRangeLg);
+rangeLgFbIp.addEventListener("change", promptTotalRangeLg);
+rangeLgTwIp.addEventListener("change", promptTotalRangeLg);
+rangeLgWpIp.addEventListener("change", promptTotalRangeLg);
+rangeLgEmIp.addEventListener("change", promptTotalRangeLg);
+
+//*Alert users that the total  range of the inputs should notbe above 100
+function promptTotalRangeLg(){
+    let totalRangeLg =Number(rangeLgGglIp.value)+Number(rangeLgLiIp.value)+Number(rangeLgInstaIp.value)+Number(rangeLgFbIp.value)+Number(rangeLgTwIp.value)+ Number(rangeLgWpIp.value)+ Number(rangeLgEmIp.value);
+    if(totalRangeLg>100){
+        alert("🤔😮Total split percentage TOTAL cannot be above 100")
+
+    }
+}
+
+function changeRangeValueLgGgl(val){
+    document.getElementById("googleLeadGenInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLgGgl(val){
+    document.getElementById("googleLeadGenInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueLgLi(val){
+    document.getElementById("linkedInLeadGenInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLgLi(val){
+    document.getElementById("linkedInLeadGenInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeRangeValueLgIns(val){
+    document.getElementById("instagramLeadGenInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLgIns(val){
+    document.getElementById("instagramLeadGenInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueLgFb(val){
+    document.getElementById("facebookLeadGenInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLgFb(val){
+    document.getElementById("facebookLeadGenInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueLgTw(val){
+    document.getElementById("twitterLeadGenInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLgTw(val){
+    document.getElementById("twitterLeadGenInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueLgWa(val){
+    document.getElementById("whatsAppImLeadGenInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueLgWa(val){
+    document.getElementById("whatsAppImLeadGenInput_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+
+function changeRangeValueLgEm(val){
+    document.getElementById("emailLeadGenInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+   }
+function changeInputValueLgEm(val){
+    document.getElementById("emailLeadGenInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+
+//--------------MAX QUALIFICATION
+
+function changeRangeValueQlGgl(val){
+    document.getElementById("googleQLeadsInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueQlGgl(val){
+    document.getElementById("googleQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueQlLi(val){
+    document.getElementById("linkedInQLeadsInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueQlLi(val){
+    document.getElementById("linkedInQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueQlIns(val){
+    document.getElementById("instagramQLeadsInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueQlIns(val){
+    document.getElementById("instagramQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueQlFb(val){
+    document.getElementById("facebookQLeadsInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueQlFb(val){
+    document.getElementById("facebookQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueQlTw(val){
+    document.getElementById("twitterQLeadsInputId").value = isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueQlTw(val){
+    document.getElementById("twitterQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+
+function changeRangeValueQlWa(val){
+    document.getElementById("whatsAppImQLeadsInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+   
+}
+function changeInputValueQlWa(val){
+    document.getElementById("whatsAppImQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+
+function changeRangeValueQlEm(val){
+    document.getElementById("emailQLeadsInputId").value =isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+}
+function changeInputValueQlEm(val){
+    document.getElementById("emailQLeadsInputId_nm").value=isNaN(parseInt(val,10))?0:parseInt(val,10);
+    showValue1(val);
+    
+}
+   
+</script>
    
 </body>
 

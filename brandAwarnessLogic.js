@@ -14,6 +14,18 @@ function calculateAwTotal(){
     totalAwValue.innerHTML = totalAw;
     console.log("awarness is working")
     console.log(totalAw)
+    if(totalAw>100){
+        document.getElementById("totalAw-sp").style.backgroundColor="red";
+        document.getElementById("totalAw-sp").style.borderRadius="20%";
+        document.getElementById("totalAw-sp").style.paddingLeft="2px";
+        document.getElementById("totalAw-sp").style.paddingRight="2px";
+        document.getElementById("totalAw-sp").style.color="white";
+        // alert("🤔😮Total split percentage TOTAL cannot be above 100");
+    }else{
+        document.getElementById("totalAw-sp").style.color="green";
+        document.getElementById("totalAw-sp").style.backgroundColor="transparent";
+    }
+    
 }
 
 rangeAwGglIp.addEventListener("input", calculateAwTotal);
@@ -23,9 +35,26 @@ rangeAwFbIp.addEventListener("input", calculateAwTotal);
 rangeAwTwIp.addEventListener("input", calculateAwTotal);
 rangeAwWpIp.addEventListener("input", calculateAwTotal);
 rangeAwEmIp.addEventListener("input", calculateAwTotal);
+//*Alert users that the total  range of the inputs should notbe above 100
+rangeAwGglIp.addEventListener("change", promptTotalRangeAw);
+rangeAwLiIp.addEventListener("change", promptTotalRangeAw);
+rangeAwInstaIp.addEventListener("change", promptTotalRangeAw);
+rangeAwFbIp.addEventListener("change", promptTotalRangeAw);
+rangeAwTwIp.addEventListener("change", promptTotalRangeAw);
+rangeAwWpIp.addEventListener("change", promptTotalRangeAw);
+rangeAwEmIp.addEventListener("change", promptTotalRangeAw);
+
+//*Alert users that the total  range of the inputs should notbe above 100
+function promptTotalRangeAw(){
+    let totalRangeAw =Number(rangeAwGglIp.value)+Number(rangeAwLiIp.value)+Number(rangeAwInstaIp.value)+Number(rangeAwFbIp.value)+Number(rangeAwTwIp.value)+ Number(rangeAwWpIp.value)+ Number(rangeAwEmIp.value);
+    if(totalRangeAw>100){
+        alert("🤔😮Total split percentage TOTAL cannot be above 100")
+
+    }
+}
 
 //*USER input and range slider input sync
-//TODO:User input and range slider SYNC
+//DONE:User input and range slider SYNC
 
 //DONE:Google
 //? range input id-> googleAwarenessInputId
